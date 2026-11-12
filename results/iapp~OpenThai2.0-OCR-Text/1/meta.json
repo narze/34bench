@@ -1,0 +1,15 @@
+{
+  "model": "iapp/OpenThai2.0-OCR-Text",
+  "revision": "39fa41bdd49f067ba41b1d9de79c06ab506d67d4",
+  "effort": null,
+  "requestedProvider": null,
+  "image": "full",
+  "prompt": null,
+  "date": "2026-11-12T07:54:46.971Z",
+  "durationMs": 718,
+  "cost": null,
+  "credits": null,
+  "usage": null,
+  "provider": "Local CPU, 1 thread (AMD Ryzen 7 5800X 8-Core Processor), openvino",
+  "finishReason": null
+}
