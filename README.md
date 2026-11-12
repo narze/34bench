@@ -26,6 +26,10 @@ transcriptions), so it is also under the GFDL 1.3. See [data/COPYING](data/COPYI
   of the figure inside it." OCR services (Paxa, iApp, Mistral, AksonOCR) get only the image. Typhoon
   OCR gets its own prompt and image size, as its official client sends them (see
   [`src/typhoon.ts`](src/typhoon.ts)).
+- The iApp OpenThai2.0 open-weights models run on a local computer (see
+  [`scripts/openthai.py`](scripts/openthai.py)): OCR-Text on the CPU, and OCR-Markdown on an NVIDIA
+  GPU with the `DocumentParser` that ships with it. They have no price. Their time does not include
+  the time to load the model.
 - From each response, the header, forward trip, return trip, and footer are extracted into
   `extracted.json`. The map (section 2) is not scored. See
   [`results/README.md`](results/README.md#extraction-rules).
@@ -54,6 +58,8 @@ deno task mistral --model mistral-ocr-4-0 --runs 3                   # Mistral O
 deno task mistral --model mistral-ocr-4-1 --runs 3                   # Mistral OCR 4.1
 deno task akson --runs 3                                             # AksonOCR 1.5 (free)
 deno task akson --model AksonOCR-handwriting --runs 3                # AksonOCR handwriting
+uv run scripts/openthai.py --model text --runs 3                     # OpenThai2.0-OCR-Text (CPU)
+uv run scripts/openthai.py --model markdown --runs 3                 # OpenThai2.0-OCR-Markdown (GPU)
 deno task test                                                       # check extracted.json
 deno run --allow-read src/score.ts                                   # print scores
 deno task render                                                     # write results.svg

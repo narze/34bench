@@ -26,5 +26,7 @@
   "aksonocr~AksonOCR-1.0": "OCR service. No prompt. Forward and return trips exact in all runs. The footer is partly made up. Describes the map in English.",
   "aksonocr~AksonOCR-preview": "OCR service. No prompt. Same output in all runs. Describes the footer (\"เอกสารนี้มีเลขที่กำกับ…\") instead of transcribing it.",
   "iapp~document-ocr-v3": "OCR service, v3 (from 2026-10-05, 0.049 IC per page). Plain text output (no Markdown). No prompt. Same output in all runs. Almost the same as v2: 5 small differences.",
-  "iapp~document-layout-v3": "OCR service, v3, /layout endpoint (0.15 IC per page). No prompt. Same output in all runs. Only 3 components, out of order: parts of the return trip come first, and the header and the footer are missing."
+  "iapp~document-layout-v3": "OCR service, v3, /layout endpoint (0.15 IC per page). No prompt. Same output in all runs. Only 3 components, out of order: parts of the return trip come first, and the header and the footer are missing.",
+  "iapp~OpenThai2.0-OCR-Text": "Open-weights OCR model, the engine behind iApp OCR v3. Runs on a local CPU (1 thread), so it has no price. No prompt. Same output in all runs. It reads 56 lines, but keeps only 13: the shipped config drops lines under 0.8 confidence.",
+  "iapp~OpenThai2.0-OCR-Markdown": "Open-weights OCR model (a fine-tune of Nemotron 3.5 Parse). Runs on a local GPU (RTX 5060 Ti) with its own DocumentParser, in box mode, so it has no price. Uses its own task prompt (tokens, not words). Same output in all runs. Many words are misread as other real words (\"รังสิทธิ์\" for \"รังสิต\")."
 }
