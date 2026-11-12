@@ -1,0 +1,17 @@
+{
+  "model": "iapp/OpenThai2.0-OCR-Markdown",
+  "revision": "7a153712e5b50fac7e4a9d42ccf9ec41fb4202f0",
+  "effort": null,
+  "requestedProvider": null,
+  "image": "full",
+  "prompt": "</s><s><predict_bbox><predict_classes><output_markdown><predict_text_in_pic>",
+  "date": "2026-11-12T07:55:28.498Z",
+  "durationMs": 5209,
+  "cost": null,
+  "credits": null,
+  "usage": {
+    "completion_tokens": 878
+  },
+  "provider": "Local GPU (NVIDIA GeForce RTX 5060 Ti), Transformers",
+  "finishReason": "stop"
+}
